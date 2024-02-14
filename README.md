@@ -22,3 +22,13 @@ cacheSolve <- function(x, ...) {
   x$setinverse(inv)
   inv
 }
+> m <- makeCacheMatrix(matrix(c(1,2,3,4), nrow=2))
+> cacheSolve(m)
+     [,1] [,2]
+[1,] -2.0  1.5
+[2,]  1.0 -0.5
+> cacheSolve(m)
+getting cached data
+     [,1] [,2]
+[1,] -2.0  1.5
+[2,]  1.0 -0.5
